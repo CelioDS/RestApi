@@ -5,5 +5,7 @@ export const db = mysql.createConnection({
   user: "root",
   password: "-+bjSsgGhgVd/]xU",
   database: "bamboo-strata-393118:us-central1:celio-1270",
-});
 
+  projectId: "bamboo-strata-393118",
+  keyFilename: "/path/to/key.json",
+});

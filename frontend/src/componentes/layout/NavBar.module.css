@@ -28,7 +28,7 @@ nav > .logo:hover {
 nav > ul {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
   width: 50%;
   z-index: 2;
 }

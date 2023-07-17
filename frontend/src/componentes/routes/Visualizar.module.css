@@ -54,7 +54,7 @@
 
 .father .linkName {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   width: 100%;
   gap: 10px;
   font-weight: bolder;

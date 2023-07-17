@@ -6,3 +6,4 @@ export const db = mysql.createConnection({
   password: "-+bjSsgGhgVd/]xU",
   database: "bamboo-strata-393118:us-central1:celio-1270",
 });
+

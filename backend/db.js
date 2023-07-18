@@ -1,10 +1,11 @@
 import mysql from "mysql";
 
 export const db = mysql.createConnection({
-  host: "Localhost",
-  user: "celsan46_jogotrol",
-  password: "pDlvD7S81-",
-  database: "celsan46_jogotrol",
+  host: "34.171.26.217",
+  user: "root",
+  password: "n#$|,CSKkO$uJ6(*",
+  database: "empresas",
 
+  projectId: "bamboo-strata-393118",
 
 });

@@ -5,10 +5,7 @@ export const db = mysql.createConnection({
   user: "root",
   password: "n#$|,CSKkO$uJ6(*",
   database: "empresas",
+
   projectId: "bamboo-strata-393118",
-
-  
-
-
 
 });

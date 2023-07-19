@@ -8,10 +8,10 @@ export const db = mysql.createConnection({
 
   projectId: "bamboo-strata-393118", */
 
-  host: "sql.freedb.tech",
-  user: "freedb_bussinessDB",
-  password: "jBsxv6SVK6TY%%v",
-  database: "freedb_bussiness",
+  host: "db4free.net",
+  user: "teste01ada",
+  password: "PZXvAFdxa.bh2Yg",
+  database: "teste01ada",
 
 
 });

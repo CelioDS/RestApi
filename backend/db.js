@@ -13,5 +13,5 @@ export const db = mysql.createConnection({
   password: "jBsxv6SVK6TY%%v",
   database: "freedb_bussiness",
 
-  projectId: "bamboo-strata-393118",
+
 });

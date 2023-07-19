@@ -20,7 +20,7 @@ export default function Input({
         value={value}
         className={className}
         onChange={onChange}
-        required
+        //required
       />
     </div>
   );

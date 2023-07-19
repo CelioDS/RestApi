@@ -28,7 +28,7 @@ export default function Visualizar() {
 
   async function getUsers() {
     try {
-      const res = await axios.get("http://localhost:8800");
+      const res = await axios.get("https://rest-api-ashen-pi.vercel.app/");
       setArrayBd(res.data.sort((a, b) => (a.nome > b.nome ? 1 : -1)));
       toast.success("Api funcionando!", {
         position: "bottom-right", // Define a posição do toast (por exemplo, no canto superior direito)

@@ -60,7 +60,7 @@ export default function VisualizarDB() {
 
   async function removeEmpresa(id) {
     await axios
-      .delete("http://localhost:8800/" + id)
+      .delete("https://rest-api-ashen-pi.vercel.app/" + id)
       .then(({ data }) => {
         const newBD = database.filter((empresa) => empresa.id !== id);
         setDatabase(newBD);

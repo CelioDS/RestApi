@@ -45,7 +45,18 @@ export default function Cadastrar({ getDataBase }) {
 
     const user = ref.current;
 
-    if (!user.nome.value || !user.localidade.value) {
+    if (
+      !user.nome.value ||
+      !user.localidade.value ||
+      !user.site.value ||
+      !user.setor.value ||
+      !user.visao.value ||
+      !user.fundador.value ||
+      !user.anofundacao.value ||
+      !user.imagem.value ||
+      !user.valores.value ||
+      !user.produtos.value
+    ) {
       return toast.warn("Preencha todos os campos!!!");
     }
 

@@ -51,7 +51,7 @@ export default function Cadastrar({ getDataBase }) {
 
     if (getDataBase) {
       await axios
-        .put("http://localhost:8800/" + getDataBase[0].id, {
+        .put("https://rest-api-ashen-pi.vercel.app/" + getDataBase[0].id, {
           nome: user.nome.value,
           localidade: user.localidade.value,
           site: user.site.value,
@@ -67,7 +67,7 @@ export default function Cadastrar({ getDataBase }) {
         .catch(({ data }) => toast.error(data));
     } else {
       await axios
-        .post("http://localhost:8800", {
+        .post("https://rest-api-ashen-pi.vercel.app/", {
           nome: user.nome.value,
           localidade: user.localidade.value,
           site: user.site.value,
@@ -100,7 +100,7 @@ export default function Cadastrar({ getDataBase }) {
   async function editarApi(e) {
     const user = ref.current;
     await axios
-      .put("http://localhost:8800/" + getDataBase[0].id, {
+      .put("https://rest-api-ashen-pi.vercel.app/" + getDataBase[0].id, {
         nome: user.nome.value,
         localidade: user.localidade.value,
         site: user.site.value,

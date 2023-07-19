@@ -43,7 +43,7 @@ export default function VisualizarDB() {
 
   async function getUsers() {
     try {
-      const res = await axios.get("http://localhost:8800");
+      const res = await axios.get("https://rest-api-ashen-pi.vercel.app/");
       const data = res.data.filter((item) => item.id === idNumber);
 
       setDatabase(data);

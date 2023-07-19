@@ -25,7 +25,7 @@ export default function Home() {
 
   async function getUsers() {
     try {
-      const res = await axios.get("http://localhost:8800");
+      const res = await axios.get("https://rest-api-ashen-pi.vercel.app/");
 
       const data = res.data;
       const randomNum = Math.floor(Math.random() * data.length);

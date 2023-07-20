@@ -20,7 +20,7 @@ export default function Visualizar() {
   const isMobile = checkMobile();
 
   const [arrayBd, setArrayBd] = useState([]);
-  const [text, setText] = useState("Carregando....");
+  const [text, setText] = useState("Carregando");
 
   useEffect(() => {
     document.title = "Visualizar - BusinessHere";

@@ -114,7 +114,7 @@ export default function NavBar() {
             </Link>
             <Link
               style={linkActive === "Visualizar" ? { color: "#ff9900" } : {}}
-              onClick={ openMenu}
+              onClick={openMenu}
               className="btn"
               to="/visualizar"
             >
@@ -122,7 +122,7 @@ export default function NavBar() {
             </Link>
             <Link
               style={linkActive === "Cadastrar" ? { color: "#ff9900" } : {}}
-              onClick={ openMenu}
+              onClick={openMenu}
               className="btn"
               to="/cadastrar"
             >

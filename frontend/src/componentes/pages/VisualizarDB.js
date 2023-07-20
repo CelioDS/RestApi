@@ -68,7 +68,7 @@ export default function VisualizarDB() {
       .then(({ data }) => {
         const newBD = database.filter((empresa) => empresa.id !== id);
         setDatabase(newBD);
-        toast.success(data);
+        toast.error(data);
       })
       .catch(({ data }) => toast.error(data));
   }

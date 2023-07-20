@@ -30,6 +30,7 @@ export default function Visualizar() {
     try {
       const res = await axios.get("https://rest-api-ashen-pi.vercel.app/");
       setArrayBd(res.data.sort((a, b) => (a.nome > b.nome ? 1 : -1)));
+      setText("Carregando....");
       toast.success("Api funcionando!", {
         position: "bottom-right", // Define a posição do toast (por exemplo, no canto superior direito)
         autoClose: 5, // Define a duração do toast em milissegundos (por exemplo, 3000 = 3 segundos)
@@ -40,6 +41,8 @@ export default function Visualizar() {
         progress: undefined, // Permite personalizar a barra de progresso
       });
     } catch (error) {
+      setText("ERRO APIs");
+
       toast.error(error);
     }
   }
@@ -47,7 +50,10 @@ export default function Visualizar() {
   useEffect(() => {
     setTimeout(() => {
       getUsers();
-      setText("Sem cadastros...");
+
+      setTimeout(() => {
+        setText("Sem cadastros....");
+      }, 1000);
     }, 300);
   }, [setArrayBd]);
 

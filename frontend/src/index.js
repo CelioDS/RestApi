@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 
+
 //1 - configurando router
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -10,6 +11,7 @@ import Visualizar from "./componentes/routes/Visualizar";
 import Error from "./componentes/routes/Error";
 import VisualizarDB from "./componentes/pages/VisualizarDB";
 import Home from "./componentes/routes/Home";
+
 /*
 const router = createBrowserRouter([
   {

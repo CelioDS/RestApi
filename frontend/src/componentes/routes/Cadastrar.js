@@ -62,7 +62,7 @@ export default function Cadastrar({ getDataBase }) {
 
     if (getDataBase) {
       await axios
-        .put("https://rest-api-ashen-pi.vercel.app/" + getDataBase[0].id, {
+        .put(process.env.REACT_APP_DB_API + getDataBase[0].id, {
           nome: user.nome.value,
           localidade: user.localidade.value,
           site: user.site.value,
@@ -78,7 +78,7 @@ export default function Cadastrar({ getDataBase }) {
         .catch(({ data }) => toast.error(data));
     } else {
       await axios
-        .post("https://rest-api-ashen-pi.vercel.app/", {
+        .post(process.env.REACT_APP_DB_API, {
           nome: user.nome.value,
           localidade: user.localidade.value,
           site: user.site.value,
@@ -111,7 +111,7 @@ export default function Cadastrar({ getDataBase }) {
   async function editarApi(e) {
     const user = ref.current;
     await axios
-      .put("https://rest-api-ashen-pi.vercel.app/" + getDataBase[0].id, {
+      .put(process.env.REACT_APP_DB_API + getDataBase[0].id, {
         nome: user.nome.value,
         localidade: user.localidade.value,
         site: user.site.value,

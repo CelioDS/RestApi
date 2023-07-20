@@ -47,7 +47,7 @@ export default function VisualizarDB() {
 
   async function getUsers() {
     try {
-      const res = await axios.get("https://rest-api-ashen-pi.vercel.app/");
+      const res = await axios.get(process.env.REACT_APP_DB_API);
       const data = res.data.filter((item) => item.id === idNumber);
 
       setDatabase(data);
@@ -64,7 +64,7 @@ export default function VisualizarDB() {
 
   async function removeEmpresa(id) {
     await axios
-      .delete("https://rest-api-ashen-pi.vercel.app/" + id)
+      .delete(process.env.REACT_APP_DB_API + id)
       .then(({ data }) => {
         const newBD = database.filter((empresa) => empresa.id !== id);
         setDatabase(newBD);

@@ -83,12 +83,7 @@ export default function NavBar() {
     <div className={styles.div}>
       <main>
         <nav>
-          <LinkButton
-            to="/"
-            onClick={() => openMenu("Inicio")}
-            text="BusinessHere"
-            className={styles.logo}
-          />
+          <LinkButton to="/" text="BusinessHere" className={styles.logo} />
 
           {/*ativa o MenuMobile*/}
           {isMobile && (
@@ -111,7 +106,7 @@ export default function NavBar() {
           >
             <Link
               style={linkActive === "Inicio" ? { color: "#ff9900" } : {}}
-              onClick={() => openMenu("Inicio")}
+              onClick={openMenu}
               className="btn"
               to="/"
             >
@@ -119,7 +114,7 @@ export default function NavBar() {
             </Link>
             <Link
               style={linkActive === "Visualizar" ? { color: "#ff9900" } : {}}
-              onClick={() => openMenu("Visualizar")}
+              onClick={ openMenu}
               className="btn"
               to="/visualizar"
             >
@@ -127,7 +122,7 @@ export default function NavBar() {
             </Link>
             <Link
               style={linkActive === "Cadastrar" ? { color: "#ff9900" } : {}}
-              onClick={() => openMenu("Cadastrar")}
+              onClick={ openMenu}
               className="btn"
               to="/cadastrar"
             >

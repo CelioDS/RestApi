@@ -252,7 +252,18 @@ export default function Cadastrar({ getDataBase }) {
               {showText ? "Salvando..." : "Salvar"}
             </button>
           )}
-          {!getDataBase && <button className={style.btn}>{btnText}</button>}
+          {!getDataBase && (
+            <button
+              onClick={() => {
+                setTimeout(() => {
+                  setBtnText("Enviar");
+                }, 1500);
+              }}
+              className={style.btn}
+            >
+              {btnText}
+            </button>
+          )}
         </form>
       </div>
     </Container>

@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <Container>
       <div className={style.father}>
-        <h1>{!cumprimentoSession && "Bem vindo"}</h1>
+        <h1>{!cumprimentoSession && "Bem vindos"}</h1>
 
         <section className={style.header}>
           <div>

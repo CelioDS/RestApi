@@ -5,7 +5,7 @@
   position: relative;
   flex-direction: column;
   margin-bottom: 30px;
-  word-break: break-all;
+  word-break: keep-all!important;
 }
 
 .father h1 {
@@ -39,8 +39,9 @@
 .father .header > div > p {
   margin: 50px 0;
   border-radius: 8px;
-  font-size: 25px;
+  font-size: clamp(14px, 5vw, 25px);
   text-align: start;
+  word-break: keep-all!important;
 }
 
 .text {

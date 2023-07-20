@@ -8,6 +8,7 @@
   height: auto;
   min-height: calc(100vh - 135px);
   padding-bottom: 50px;
+  
 }
 .father .header {
   display: grid;

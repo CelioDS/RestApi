@@ -21,7 +21,7 @@ export default function NavBar() {
   const [MenuOpen, setMenuOpen] = useState(false);
   const [linkActive, setlinkActive] = useState("inicio");
 
-  function openMenu(linkActive) {
+  function openMenu(linkclick) {
     // Inverte o valor de MenuOpen
     setMenuOpen((prevState) => !prevState);
 
@@ -34,8 +34,33 @@ export default function NavBar() {
       setMenuDown(false);
     }
 
-    setlinkActive(linkActive);
+    setlinkActive(linkclick);
   }
+  useEffect(() => {
+    // Criando o MutationObserver
+    const observer = new MutationObserver((mutationsList) => {
+      for (const mutation of mutationsList) {
+        if (
+          mutation.type === "childList" &&
+          mutation.target === document.querySelector("title")
+        ) {
+          setlinkActive(mutation.target.textContent.split(" ")[0]);
+        }
+      }
+    });
+
+    // Observando mudanças no nó do título
+    observer.observe(document.querySelector("title"), {
+      subtree: true,
+      characterData: true,
+      childList: true,
+    });
+
+    // Função de limpeza para desconectar o MutationObserver ao desmontar o componente
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   useEffect(() => {
     if (!MenuOpen) {
@@ -60,7 +85,7 @@ export default function NavBar() {
         <nav>
           <LinkButton
             to="/"
-            onClick={() => openMenu("inicio")}
+            onClick={() => openMenu("Inicio")}
             text="BusinessHere"
             className={styles.logo}
           />
@@ -71,7 +96,7 @@ export default function NavBar() {
               className={`${styles.MenuBtn}
                ${menuUp ? styles.actives : ""} 
                ${menuUp ? "" : styles.activesInverso}`}
-              onClick={openMenu}
+              onClick={() => openMenu(linkActive)}
             >
               {iconMenu}
             </button>
@@ -85,24 +110,24 @@ export default function NavBar() {
            `}
           >
             <Link
-              style={linkActive === "inicio" ? { color: "#ff9900" } : {}}
-              onClick={() => openMenu("inicio")}
+              style={linkActive === "Inicio" ? { color: "#ff9900" } : {}}
+              onClick={() => openMenu("Inicio")}
               className="btn"
               to="/"
             >
               Inicio
             </Link>
             <Link
-              style={linkActive === "visualizar" ? { color: "#ff9900" } : {}}
-              onClick={() => openMenu("visualizar")}
+              style={linkActive === "Visualizar" ? { color: "#ff9900" } : {}}
+              onClick={() => openMenu("Visualizar")}
               className="btn"
               to="/visualizar"
             >
               Empresas
             </Link>
             <Link
-              style={linkActive === "cadastrar" ? { color: "#ff9900" } : {}}
-              onClick={() => openMenu("cadastrar")}
+              style={linkActive === "Cadastrar" ? { color: "#ff9900" } : {}}
+              onClick={() => openMenu("Cadastrar")}
               className="btn"
               to="/cadastrar"
             >

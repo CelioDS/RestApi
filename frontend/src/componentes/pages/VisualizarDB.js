@@ -18,6 +18,10 @@ export default function VisualizarDB() {
   const checkMobile = useCallback(CheckMobile, []);
   const isMobile = checkMobile();
 
+  useEffect(() => {
+    document.title = "Visualizar - BusinessHere";
+  }, []);
+
   // estado que controla a exibição do formulário de edição do projeto
   const [editShow, setEditShow] = useState(false);
   function toogleMessage(id, nome) {

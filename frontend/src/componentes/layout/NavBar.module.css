@@ -1,7 +1,9 @@
 :root {
   --velocidadeMenu: 1s;
 }
-
+.linkActive {
+  color: #ff9900;
+}
 nav {
   background-color: #1f1e1d;
   height: 60px;
